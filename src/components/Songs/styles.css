@@ -1,0 +1,41 @@
+.listFound {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 10px;
+}
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .listFound {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .listFound {
+    width: 90%;
+  }
+}
+.listFound li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.listFound li > p:nth-of-type(1) {
+  font-weight: 400;
+}
+.listFound li img {
+  width: 80px;
+}
+.listFound li div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.listFound li div p {
+  margin: 0;
+}
+.listFound li div > p:nth-of-type(2) {
+  font-size: 0.7rem;
+}/*# sourceMappingURL=styles.css.map */

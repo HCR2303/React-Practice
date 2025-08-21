@@ -1,0 +1,49 @@
+@import "../_mediaQuerys.scss";
+.containerSearcher{
+    font-size: 16px;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+
+    .inputSearcher{
+        box-sizing: border-box;
+        width: 30%; 
+        padding: 2px 8px;
+        margin: 0;
+        border-radius: 500px;
+    }
+    .buttonSearcher{
+        width: 27px;
+        height: 26px;
+        border-radius: 100%;
+        margin: 0;
+        padding: 0 ;
+        display: flex;          
+        border-style: none;
+        justify-content:center;
+        align-items: center;
+        background: radial-gradient(rgb(227 88 234),rgb(28 190 239));
+        &:hover{
+            background: radial-gradient(rgb(28 190 239),rgb(227 88 234));
+            .iconSearcher{
+                fill: rgb(0,0,0);
+            }
+        }
+        cursor: pointer;
+        
+        .iconSearcher{  
+            box-sizing: border-box; 
+            width: 20px;
+            height: 20px;
+            fill: rgb(255,255,255);
+            padding-left: 2px;                        
+        }
+        
+    }
+}
