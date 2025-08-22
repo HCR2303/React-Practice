@@ -1,4 +1,4 @@
-@import "../_mediaQuerys.scss";
+@use "../mediaQuerys" as media;
 .containerSearcher{
     font-size: 16px;
     height: 20px;
@@ -28,9 +28,9 @@
         border-style: none;
         justify-content:center;
         align-items: center;
-        background: radial-gradient(rgb(227 88 234),rgb(28 190 239));
+        background: radial-gradient(media.$rosita,media.$azulin);
         &:hover{
-            background: radial-gradient(rgb(28 190 239),rgb(227 88 234));
+            background: radial-gradient(media.$azulin,media.$rosita);
             .iconSearcher{
                 fill: rgb(0,0,0);
             }
@@ -46,4 +46,10 @@
         }
         
     }
+}
+h2{
+    @extend %titleStyle;
+}
+.listFound{
+    @extend %songInAList;
 }

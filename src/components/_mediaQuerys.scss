@@ -1,7 +1,71 @@
+$azulin:rgb(28 190 239);
+$rosita:rgb(227 88 234);
+
 @mixin mediumScreen{
     @media screen and (min-width:501px) and (max-width:1000px) {@content};
 }
 
 @mixin littleScreen{
     @media screen and (max-width: 500px) {@content};
+}
+
+%songInAList{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 10px;
+    @include mediumScreen{//consecuencia de la sintaxis de @use
+        width: 75%;
+    };
+    @include littleScreen{//consecuencia de la sintaxis de @use
+        width: 90%;
+    };
+    li{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;    
+        
+        >p:nth-of-type(1){
+            font-weight: 400;
+        }
+        img{
+            width: 80px;
+            cursor: pointer;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p{
+                margin: 0;
+            }
+            >p:nth-of-type(2){
+                font-size: 0.7rem;
+            }
+        }
+        button{
+            cursor: pointer;
+            font-size: 0.7rem;
+            background-color:$azulin;
+            color: rgb(0,0,0);
+            border-radius: 15px;
+            border:none;
+            width: 65px;
+            &:hover{
+                background-color:$rosita;
+            }
+        }
+    }    
+}
+
+%titleStyle{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-image:linear-gradient(to right,$azulin,$rosita);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
 }

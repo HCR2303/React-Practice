@@ -1,3 +1,68 @@
+.listFound {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 10px;
+}
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .listFound {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .listFound {
+    width: 90%;
+  }
+}
+.listFound li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.listFound li > p:nth-of-type(1) {
+  font-weight: 400;
+}
+.listFound li img {
+  width: 80px;
+  cursor: pointer;
+}
+.listFound li div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.listFound li div p {
+  margin: 0;
+}
+.listFound li div > p:nth-of-type(2) {
+  font-size: 0.7rem;
+}
+.listFound li button {
+  cursor: pointer;
+  font-size: 0.7rem;
+  background-color: rgb(28, 190, 239);
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  border: none;
+  width: 65px;
+}
+.listFound li button:hover {
+  background-color: rgb(227, 88, 234);
+}
+
+h2 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, rgb(28, 190, 239), rgb(227, 88, 234));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
 .containerSearcher {
   font-size: 16px;
   height: 20px;

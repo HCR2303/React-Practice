@@ -20,13 +20,13 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  cursor: pointer;
 }
 .listFound li > p:nth-of-type(1) {
   font-weight: 400;
 }
 .listFound li img {
   width: 80px;
+  cursor: pointer;
 }
 .listFound li div {
   display: flex;
@@ -38,4 +38,27 @@
 }
 .listFound li div > p:nth-of-type(2) {
   font-size: 0.7rem;
+}
+.listFound li button {
+  cursor: pointer;
+  font-size: 0.7rem;
+  background-color: rgb(28, 190, 239);
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  border: none;
+  width: 65px;
+}
+.listFound li button:hover {
+  background-color: rgb(227, 88, 234);
+}
+
+h2 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, rgb(28, 190, 239), rgb(227, 88, 234));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
