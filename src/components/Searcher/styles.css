@@ -21,6 +21,9 @@
   align-items: center;
   text-align: center;
 }
+.listFound li p {
+  width: 155px;
+}
 .listFound li > p:nth-of-type(1) {
   font-weight: 400;
 }
@@ -39,16 +42,17 @@
 .listFound li div > p:nth-of-type(2) {
   font-size: 0.7rem;
 }
-.listFound li button {
+.listFound li .songs {
   cursor: pointer;
-  font-size: 0.7rem;
+  text-decoration: none;
+  font-size: 1rem;
   background-color: rgb(28, 190, 239);
   color: rgb(0, 0, 0);
   border-radius: 15px;
   border: none;
   width: 65px;
 }
-.listFound li button:hover {
+.listFound li .songs:hover {
   background-color: rgb(227, 88, 234);
 }
 

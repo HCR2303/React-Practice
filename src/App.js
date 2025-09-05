@@ -1,7 +1,8 @@
-import { Component, useEffect } from "react";
+import {useEffect } from "react";
 import Header from "./components/Header";
-import Buscador from "./components/Searcher";
+import Searcher from "./components/Searcher";
 import Songs from "./components/Songs/songs";
+import {BrowserRouter, Routes,Route} from "react-router";
 
 const App=()=>{
   useEffect(()=>{
@@ -9,9 +10,12 @@ const App=()=>{
   },[])
   return (
     <>
-      <Header/>
-      <Buscador/>
-      <Songs/>
+      <Header/>  
+    
+      <Routes>
+        <Route path="/" element={<Searcher/>}></Route>
+        <Route path="/songs/:id" element={<Songs/>}></Route>
+      </Routes>
     </>
   );
 }
