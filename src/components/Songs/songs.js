@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
-import "./styles.css"
 import useFetchMusicByAlbum from '../Hooks/fetchMusicByIdAlbums';
 import missingImg from "../Resources/missing.png"
+import { ListSongs, TitleSong } from './style';
 
 const Songs=()=>{
     
@@ -19,8 +19,8 @@ const Songs=()=>{
 
     const renderSongs=()=>(
         <>
-            <h2>Canciones del Album "{albumMusic[0].strAlbum}"</h2>
-            <ul className="listFound">
+            <TitleSong>Canciones del Album "{albumMusic[0].strAlbum}"</TitleSong>
+            <ListSongs className="listFound">
                     {albumMusic.map(({idTrack,strTrackThumb,strTrack,strStyle,strMusicVid})=>(
                     /*se realiza una identificación para el elemento li mediante key instead id*/
                     
@@ -36,7 +36,7 @@ const Songs=()=>{
                     </li>
                 
                 ))}
-            </ul>
+            </ListSongs>
         </>
     )
    

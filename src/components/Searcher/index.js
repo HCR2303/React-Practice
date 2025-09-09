@@ -1,7 +1,8 @@
 import React,{useEffect, useRef, useState} from "react";
-import "./styles.css";
+
 import useFetchAlbumsByWord from "../Hooks/fetchAlbumsByWord";
 import AlbumList from "../Albums/albums";
+import { SeacherContainer } from "./style";
 
 const Searcher =()=>{
 
@@ -41,14 +42,14 @@ const Searcher =()=>{
 
     return(
        <>
-            <div className="containerSearcher">
+            <SeacherContainer className="containerSearcher">
                 <input ref={inputRef} className="inputSearcher" type="text" onKeyDown={handleKeyInput} defaultValue={word || ""}></input>
                 <button className="buttonSearcher" onClick={handleSearch}>
                     <svg className="iconSearcher" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                     </svg>
                 </button>
-            </div>                            
+            </SeacherContainer>                            
             {renderContent()}                      
         </>
     )    

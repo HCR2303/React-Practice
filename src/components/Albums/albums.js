@@ -1,12 +1,13 @@
 import { Link } from "react-router";
 import missingImg from "../Resources/missing.png"
+import { ListSeacher, TitleSearcher } from "../Searcher/style";
 
 const AlbumList =({albums})=>{
 
     return (
         <>
-            <h2>Álbumes disponibles</h2>
-            <ul className="listFound">            
+            <TitleSearcher>Álbumes disponibles</TitleSearcher>
+            <ListSeacher className="listFound">            
                 {albums.map(({idAlbum,strAlbum,strAlbumThumb,strArtist,intYearReleased,strTheme})=>(
                     <li key={idAlbum}>
                         <img src={strAlbumThumb?strAlbumThumb:missingImg} alt={`${strAlbum}_img`} ></img>
@@ -19,7 +20,7 @@ const AlbumList =({albums})=>{
                         <Link to={`/songs/${idAlbum}`} className="songs">Ver album</Link>
                     </li>
                 ))}
-            </ul>
+            </ListSeacher>
         </>
     )
 }

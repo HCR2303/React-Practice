@@ -1,25 +1,23 @@
-$azulin:rgb(28 190 239);
-$rosita:rgb(227 88 234);
+import { UNSAFE_ErrorResponseImpl } from "react-router";
+import styled, {css} from "styled-components";
 
-@mixin mediumScreen{
-    @media screen and (min-width:501px) and (max-width:1000px) {@content};
-}
 
-@mixin littleScreen{
-    @media screen and (max-width: 500px) {@content};
-}
+const titles=css`
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-image:${props=>`linear-gradient(to right,${props.theme.colors.primary})`};
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+`;
 
-%songInAList{
+const lists=css`
     display: flex;
     flex-direction: column;
     width: 40%;
     gap: 10px;
-    @include mediumScreen{//consecuencia de la sintaxis de @use
-        width: 75%;
-    };
-    @include littleScreen{//consecuencia de la sintaxis de @use
-        width: 90%;
-    };
+    
     li{
         display: flex;
         flex-direction: row;
@@ -51,24 +49,19 @@ $rosita:rgb(227 88 234);
             cursor: pointer;
             text-decoration: none;            
             font-size: 1rem;
-            background-color:$azulin;
+            background-color:${props=>props.theme.colors.azulin};
             color: rgb(0,0,0);
             border-radius: 15px;
             border:none;
             width: 65px;
             &:hover{
-                background-color:$rosita;
+                background-color:${props=>props.theme.colors.rosita};
             }
         }
-    }    
-}
+    }  
+`;
 
-%titleStyle{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-image:linear-gradient(to right,$azulin,$rosita);
-    background-clip: text;
-    color: transparent;
-    text-align: center;
-}
+export {
+    titles,
+    lists
+};

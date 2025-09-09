@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "./Logo.png";
-import "./styles.css";
+import LogoVisual, { WelcomeTitle } from "./style";
 
 const Header =(props)=>{
     
@@ -24,10 +24,10 @@ const Header =(props)=>{
     
     return(// en componentes funcionales ya no se requiere el comando RENDER y solo se utiliza el RETURN 
         //observar que el llamado de las variables es directamente como se nombraron en la linea 9 {className}
-        <div className="container__Logo">
+        <LogoVisual className="container__Logo">
             <img id="Logo"className={className} src={logo} alt="VisioMusic_logo"/>
             <h2 className="logoTitle">Bienvenido a Visio-Music</h2>
-        </div>
+        </LogoVisual>
     )
 }
 

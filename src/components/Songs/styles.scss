@@ -1,7 +1,0 @@
-@use "../mediaQuerys" as media;
-h2{
-    @extend %titleStyle;
-}
-.listFound{
-    @extend %songInAList;
-}

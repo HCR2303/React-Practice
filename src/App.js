@@ -2,7 +2,9 @@ import {useEffect } from "react";
 import Header from "./components/Header";
 import Searcher from "./components/Searcher";
 import Songs from "./components/Songs/songs";
-import {BrowserRouter, Routes,Route} from "react-router";
+import {Routes,Route} from "react-router";
+import { ThemeProvider } from "styled-components";
+import Theme from "./Theme";
 
 const App=()=>{
   useEffect(()=>{
@@ -10,12 +12,13 @@ const App=()=>{
   },[])
   return (
     <>
-      <Header/>  
-    
-      <Routes>
-        <Route path="/" element={<Searcher/>}></Route>
-        <Route path="/songs/:id" element={<Songs/>}></Route>
-      </Routes>
+      <ThemeProvider theme={Theme}>
+        <Header/>    
+        <Routes>
+          <Route path="/" element={<Searcher/>}></Route>
+          <Route path="/songs/:id" element={<Songs/>}></Route>
+        </Routes>
+      </ThemeProvider>
     </>
   );
 }

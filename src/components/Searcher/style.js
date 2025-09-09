@@ -1,5 +1,8 @@
-@use "../mediaQuerys" as media;
-.containerSearcher{
+import styled from "styled-components";
+import Theme from "../../Theme/index.js";
+import { lists, titles } from "../../Theme/globalStyles.js";
+
+const SeacherContainer = styled.div `
     font-size: 16px;
     height: 20px;
     width: 100%;
@@ -28,9 +31,9 @@
         border-style: none;
         justify-content:center;
         align-items: center;
-        background: radial-gradient(media.$rosita,media.$azulin);
+        background:${props => `radial-gradient(${props.theme.colors.primary})`};
         &:hover{
-            background: radial-gradient(media.$azulin,media.$rosita);
+            background: ${props => `radial-gradient(${props.theme.colors.secindary})`};
             .iconSearcher{
                 fill: rgb(0,0,0);
             }
@@ -44,12 +47,19 @@
             fill: rgb(255,255,255);
             padding-left: 2px;                        
         }
-        
     }
-}
-h2{
-    @extend %titleStyle;
-}
-.listFound{
-    @extend %songInAList;
+`
+
+const TitleSearcher= styled.h2`
+    ${titles};
+`
+
+const ListSeacher=styled.ul`
+    ${lists};
+`
+
+export {
+    SeacherContainer,
+    TitleSearcher,
+    ListSeacher
 }
